@@ -1,4 +1,4 @@
-// import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { aiEnabled, answerWithAi } from '@/lib/ai';
 import { db } from '@/lib/db';
 import { getReviewedAnswer } from '@/lib/facts';
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0] ?? 'anon';
 
   if (!(await allowed(ip))) {
-    return Response.json({ error: 'slow_down' }, { status: 429 });
+    return NextResponse.json({ error: 'slow_down' }, { status: 429 });
   }
 
   const body = await req.json().catch(() => ({}));
@@ -55,5 +55,5 @@ export async function POST(req: Request) {
     .insert({ lang, question: question || slug, slug, answered: answer.found, ai: usedAi })
     .then(() => {});
 
-  return Response.json(answer);
+  return NextResponse.json(answer);
 }
