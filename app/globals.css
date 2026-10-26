@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+/* Brand colours (taken from the logo). Dark values apply when <html data-theme="dark">. */
+:root {
+  --bg: #ffffff;
+  --bg2: #f1f4f2;
+  --card: #ffffff;
+  --ink: #101010;
+  --mute: #4d5a53;
+  --line: #d9e1dc;
+  --green: #125b2a;
+  --acc: #24924a;
+  --on-brand: #ffffff;
+  --bub: #e4f3ea;
+  --me: #101010;
+  --meink: #ffffff;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0c0f0d;
+  --bg2: #141a16;
+  --card: #18201b;
+  --ink: #f2f5f3;
+  --mute: #a7b4ac;
+  --line: #2a352d;
+  --green: #2fae5c;
+  --acc: #2fae5c;
+  --on-brand: #07130b;
+  --bub: #1d2f23;
+  --me: #e9eeea;
+  --meink: #101010;
+  color-scheme: dark;
+}
+
+/* Lets Tailwind classes such as bg-card and text-mute follow the variables above. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg2);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-mute: var(--mute);
+  --color-line: var(--line);
+  --color-brand: var(--green);
+  --color-accent: var(--acc);
+  --color-on-brand: var(--on-brand);
+  --color-bubble: var(--bub);
+  --color-me: var(--me);
+  --color-me-ink: var(--meink);
+  --font-sans: var(--font), system-ui, Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bg font-sans leading-normal text-ink;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--acc);
+    outline-offset: 2px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}

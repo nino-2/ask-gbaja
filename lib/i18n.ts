@@ -1,0 +1,177 @@
+// UI text per language. AI-drafted: each non-English set needs native-speaker review before launch.
+export const LANGS = {
+  en: 'English',
+  pcm: 'Pidgin',
+  yo: 'Yorùbá',
+  ha: 'Hausa',
+  ig: 'Igbo',
+} as const;
+export type Lang = keyof typeof LANGS;
+export const T: Record<Lang, any> = {
+  en: {
+    h1: 'Understand President Tinubu’s reforms, clearly and simply',
+    sub: 'Ask by text or voice. Every answer shows its source and date.',
+    ask: 'Ask',
+    ph: 'Ask about a reform…',
+    listen: 'Listen',
+    clear: 'Clear my chats',
+    saved: 'Saved on this device only.',
+    hello: 'Hello! Ask me about the student loan, CNG or the minimum wage.',
+    none: 'I don’t have a verified answer for that yet.',
+    fallback:
+      'This answer is not yet available in your language, so here it is in English.',
+    topics: {
+      'student-loan': 'Student loan',
+      cng: 'CNG',
+      'minimum-wage': 'Minimum wage',
+    },
+  },
+  pcm: {
+    h1: 'Understand wetin President Tinubu reforms mean, simple simple',
+    sub: 'Ask with text or voice. Every answer go show where e come from.',
+    ask: 'Ask',
+    ph: 'Ask your question…',
+    listen: 'Listen',
+    clear: 'Delete my chats',
+    saved: 'Na only this phone dey keep am.',
+    hello: 'How far! Ask me about student loan, CNG or minimum wage.',
+    none: 'I never get verified answer for this one yet.',
+    fallback: 'This answer never dey for your language yet, na English we put.',
+    topics: {
+      'student-loan': 'Student loan',
+      cng: 'CNG',
+      'minimum-wage': 'Minimum wage',
+    },
+  },
+  yo: {
+    h1: 'Ní òye àtúnṣe Ààrẹ Tinubu ní kedere àti ní ṣókí',
+    sub: 'Béèrè pẹ̀lú ọ̀rọ̀ tàbí ohùn. Ìdáhùn kọ̀ọ̀kan fi orísun rẹ̀ hàn.',
+    ask: 'Béèrè',
+    ph: 'Béèrè ìbéèrè rẹ…',
+    listen: 'Gbọ́',
+    clear: 'Pa àwọn ìjíròrò mi rẹ́',
+    saved: 'A fi pamọ́ sórí ẹ̀rọ yìí nìkan.',
+    hello: 'Ẹ n lẹ́! Ẹ béèrè nípa awin ọmọ ilé-ìwé, CNG tàbí owó oṣù tó kéré jù.',
+    none: 'Mi ò tíì ní ìdáhùn tí a ti fìdí rẹ̀ múlẹ̀ lórí èyí.',
+    fallback: 'Ìdáhùn yìí kò tíì sí ní èdè rẹ, nítorí náà a fi ní Gẹ̀ẹ́sì.',
+    topics: {
+      'student-loan': 'Awin ọmọ ilé-ìwé',
+      cng: 'CNG',
+      'minimum-wage': 'Owó oṣù tó kéré jù',
+    },
+  },
+  ha: {
+    h1: 'Fahimci sauye-sauyen Shugaba Tinubu a sauƙaƙe',
+    sub: 'Yi tambaya da rubutu ko murya. Kowace amsa tana nuna tushenta.',
+    ask: 'Tambaya',
+    ph: 'Yi tambaya…',
+    listen: 'Saurara',
+    clear: 'Share tattaunawata',
+    saved: 'Ana adana shi a wannan na’urar kawai.',
+    hello: 'Sannu! Yi tambaya game da rancen dalibai, CNG ko mafi ƙarancin albashi.',
+    none: 'Ba ni da amsar da aka tabbatar kan wannan tukuna.',
+    fallback: 'Wannan amsar ba ta samu a harshenka ba tukuna, ga ta da Turanci.',
+    topics: {
+      'student-loan': 'Rancen dalibai',
+      cng: 'CNG',
+      'minimum-wage': 'Mafi ƙarancin albashi',
+    },
+  },
+  ig: {
+    h1: 'Ghọta mgbanwe Onye isi ala Tinubu n’ụzọ doro anya',
+    sub: 'Jụọ site n’ederede ma ọ bụ olu. Azịza ọ bụla na-egosi isi mmalite ya.',
+    ask: 'Jụọ',
+    ph: 'Jụọ ajụjụ gị…',
+    listen: 'Gee ntị',
+    clear: 'Hichapụ mkparịta ụka m',
+    saved: 'Echekwara ya naanị na ngwaọrụ a.',
+    hello: 'Ndewo! Jụọ m maka ụgwọ nwa akwụkwọ, CNG ma ọ bụ ọkpụrụkpụ ụgwọ ọrụ.',
+    none: 'Enweghị m azịza e kwadoro maka nke a.',
+    fallback: 'Azịza a anọghị n’asụsụ gị ugbu a, ya mere ọ bụ n’Bekee.',
+    topics: {
+      'student-loan': 'Ụgwọ nwa akwụkwọ',
+      cng: 'CNG',
+      'minimum-wage': 'Ọkpụrụkpụ ụgwọ ọrụ',
+    },
+  },
+};
+
+// Navigation and section headings per language (AI-drafted, needs native review).
+export const NAV: Record<Lang, any> = {
+  en: {
+    home: 'Home',
+    policies: 'Policies',
+    faq: 'FAQ',
+    about: 'About',
+    contact: 'Contact',
+    start: 'Get started',
+    worksH: 'What has been delivered',
+    more: 'See all works',
+    pick: 'Choose your language',
+    pickSub: 'You can change it any time.',
+  },
+  pcm: {
+    home: 'Home',
+    policies: 'Policies',
+    faq: 'FAQ',
+    about: 'About',
+    contact: 'Contact',
+    start: 'Start here',
+    worksH: 'Wetin don happen',
+    more: 'See all di works',
+    pick: 'Choose your language',
+    pickSub: 'You fit change am anytime.',
+  },
+  yo: {
+    home: 'Ilé',
+    policies: 'Àwọn Ìlànà',
+    faq: 'Àwọn Ìbéèrè',
+    about: 'Nípa Wa',
+    contact: 'Kàn sí wa',
+    start: 'Bẹ̀rẹ̀',
+    worksH: 'Ohun tí a ti ṣe',
+    more: 'Wo gbogbo iṣẹ́',
+    pick: 'Yan èdè rẹ',
+    pickSub: 'O lè yí i padà nígbàkúgbà.',
+  },
+  ha: {
+    home: 'Gida',
+    policies: 'Manufofi',
+    faq: 'Tambayoyi',
+    about: 'Game da mu',
+    contact: 'Tuntuɓe mu',
+    start: 'Fara',
+    worksH: 'Abubuwan da aka yi',
+    more: 'Duba duk ayyukan',
+    pick: 'Zaɓi harshenka',
+    pickSub: 'Za ka iya canza shi kowane lokaci.',
+  },
+  ig: {
+    home: 'Ụlọ',
+    policies: 'Atumatu',
+    faq: 'Ajụjụ',
+    about: 'Maka anyị',
+    contact: 'Kpọtụrụ anyị',
+    start: 'Malite',
+    worksH: 'Ihe e mere',
+    more: 'Lee ọrụ niile',
+    pick: 'Họrọ asụsụ gị',
+    pickSub: 'Ị nwere ike ịgbanwe ya oge ọ bụla.',
+  },
+};
+export type Tr = string | Partial<Record<Lang, string>>;
+
+// Short notice shown under AI-written answers (AI-drafted, needs native review).
+export const EXTRA: Record<Lang, { aiNote: string }> = {
+  en: { aiNote: 'Written by AI from approved records. Check the sources below.' },
+  pcm: { aiNote: 'AI write this from approved records. Check di sources below.' },
+  yo: {
+    aiNote: 'AI ló kọ èyí láti inú àwọn ìwé tí a fọwọ́ sí. Ṣàyẹ̀wò àwọn orísun ní ìsàlẹ̀.',
+  },
+  ha: {
+    aiNote: 'AI ne ya rubuta wannan daga bayanan da aka amince. Duba tushen da ke ƙasa.',
+  },
+  ig: {
+    aiNote: 'AI dere nke a site n’akwụkwọ ndị e kwadoro. Lelee isi mmalite n’okpuru.',
+  },
+};
